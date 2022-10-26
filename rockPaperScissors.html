@@ -1,0 +1,130 @@
+<!-- The Winning Rules are as follows:
+
+Rock smashes Scissors.
+Paper covers Rock.
+Scissors cut Paper.
+
+Key concepts for this challenge exercise: 
+
+    Variables and constants. 
+    Control flow (if statements). 
+    Loops (for each loop). 
+    Event listeners. 
+    Functions. 
+    The DOM: 
+        document.getElementById. 
+        document.querySelectorAll. -->
+
+        <!DOCTYPE html>
+        <html lang="en">
+          <head>
+            <meta charset="UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Vanilla JS - Rock Paper Scissors Challenge</title>
+            <style>
+              .options {
+                display: flex;
+                justify-content: center;
+              }
+            </style>
+          </head>
+          <body>
+            <!-- Buttons -->
+            <div class="options">
+              <button id="rock">Rock</button>
+              <button id="paper">Paper</button>
+              <button id="scissors">Scissors</button>
+            </div>
+            <br />
+            <!-- Info -->
+            <h2>Your Option: <span id="user-option"></span></h2>
+            <h2>Computer Option: <span id="computer-option"></span></h2>
+            <h2>Result: <span id="result"></span></h2>
+        
+            <script>
+              // Declare constants and variables
+              const possibleOptions = document.querySelectorAll("button"); // Creates a NodeList
+              const userOptionSpan = document.getElementById("user-option");
+              const computerOptionSpan = document.getElementById("computer-option");
+              const resultSpan = document.getElementById("result");
+              let userOption;
+              let computerOption;
+              let result;
+        
+              // Grab the buttons and add an event listener
+              possibleOptions.forEach((possibleOption) =>
+                // When a button is pressed
+                possibleOption.addEventListener("click", (e) => {
+                  // Get the button id value
+                  userOption = e.target.id;
+                  // Display the id value on the browser
+                  userOptionSpan.innerHTML = userOption;
+                  // Generate the computer option
+                  generateComputerOption();
+                  // Get the result
+                  getResult();
+                })
+              );
+        
+              // Function to generate the computer option
+              function generateComputerOption() {
+                // Generate a random number (avoiding zero)
+                let randomNumber = Math.floor(Math.random() * 3) + 1;
+        
+                switch (randomNumber) {
+                  // If we get the number 1
+                  case 1:
+                    computerOption = "rock";
+                    break;
+        
+                  // If we get the number 2
+                  case 2:
+                    computerOption = "paper";
+                    break;
+        
+                  // If we get the number 3
+                  case 3:
+                    computerOption = "scissors";
+                    break;
+                }
+                // Display the option on the browser
+                computerOptionSpan.innerHTML = computerOption;
+              }
+        
+              // Function to return the result
+              function getResult() {
+                // A draw
+                if (computerOption === userOption) {
+                  result = "its a draw!";
+                }
+                // Rock Vs Paper
+                if (computerOption === "rock" && userOption === "paper") {
+                  result = "you win!";
+                }
+                // Scissors Vs Paper
+                if (computerOption === "scissors" && userOption === "paper") {
+                  result = "you lose!";
+                }
+                // Paper Vs Scissors
+                if (computerOption === "paper" && userOption === "scissors") {
+                  result = "you win!";
+                }
+                // Rock Vs Scissors
+                if (computerOption === "rock" && userOption === "scissors") {
+                  result = "you lose!";
+                }
+                // Scissors Vs Rock
+                if (computerOption === "scissors" && userOption === "rock") {
+                  result = "you win!";
+                }
+                // Paper Vs Rock
+                if (computerOption === "paper" && userOption === "rock") {
+                  result = "you lose!";
+                }
+                // Display the result on the browser
+                resultSpan.innerHTML = result;
+              }
+            </script>
+          </body>
+        </html>

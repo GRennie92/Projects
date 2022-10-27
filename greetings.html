@@ -15,12 +15,41 @@
       <body>
         <h1>Hello World</h1>
         <script>
+            // hello world test
             console.log("Hello World");
-
-            let greet = name => {
+            // Q1 - greet function
+            let greet = name =>{
               return 'hello ' + name
             }
-            console.log(greet('Sarah'));
+            console.log(greet("Sarah"));
+            // Q2 - isEven function
+            let isEven = num =>{
+              return num%2 === 0;
+            }
+            console.log(isEven(4));
+            // Q3 - counterFun
+            let counterFun = counter =>{
+              if(counter > 100){
+                counter = 0;
+              }
+              else{
+                counter++;
+              }
+              return counter;
+            }
+            console.log(counterFun(101))
+            // Q4 - nameAge
+            let nameAge = (name, age) =>{
+              console.log("Hello " + name);
+              console.log("You are " + age + " years old!");
+            }
+            console.log(nameAge("Sydney", 23));
+            // Q5 - printOnly
+            let printOnly =  =>{
+              console.log("printing");
+            }
+            console.log(printOnly());
+
         </script>
       </body>
 </html>

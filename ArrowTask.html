@@ -17,16 +17,28 @@
         <script>
             // hello world test
             console.log("Hello World");
+            
             // Q1 - greet function
             let greet = name =>{
               return 'hello ' + name
             }
             console.log(greet("Sarah"));
+            // Jorge's method
+            //const greet2 = (name) => "Hi " + name + "!";
+            const greet2 = (name) => `Hi ${name}!`;
+            console.log(greet2("John"));
+            console.log(greet2("James"));
+            
             // Q2 - isEven function
             let isEven = num =>{
               return num%2 === 0;
             }
             console.log(isEven(4));
+            // Jorge's method
+            const isEven2 = (number) => num%2 === 0;
+            console.log(isEven2(4));  // TRUE
+            console.log(isEven2(5));  // FALSE
+
             // Q3 - counterFun
             let counterFun = counter =>{
               if(counter > 100){
@@ -38,22 +50,49 @@
               return counter;
             }
             console.log(counterFun(100))
+            // Jorge's method
+            const counterFun2 = counter =>{
+              if(counter > 100){
+                counter = 0;
+              }
+              else{
+                counter++;
+              }
+              return counter;
+            }
+            console.log(counterFun2(100));  // Counter will be 101
+            console.log(counterFun2(101));  // Counter will be 0
+            
             // Q4 - nameAge
             let nameAge = (name, age) =>{
               console.log("Hello " + name);
               console.log("You are " + age + " years old!");
             }
-            console.log(nameAge("Sydney", 23));
+            (nameAge("Sydney", 23));
+            // Jorge's method
+            const nameAge2 = (name, age) =>{
+              console.log("Hello " + name);
+              console.log("You are: " + age + " years old.");
+            }
+            (nameAge2("John", 50));
+            
             // Q5 - printOnly
             let printOnly = () =>{
               console.log("printing");
             }
-            console.log(printOnly());
-            // Q5 - Sum
+            (printOnly());
+            // Jorge's method
+            const printOnly2 = () => console.log("printing");
+            printOnly2();
+            
+            // Q6 - Sum
             let sum = (num1, num2) =>{
               return num1 + num2;
             }
             console.log(sum(5,20));
+            // Jorge's method
+            const sum2 = (num1, num2) => num1 + num2;
+            console.log(sum2(10, 10));
 
         </script>
       </body>

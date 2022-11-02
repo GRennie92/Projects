@@ -1,0 +1,23 @@
+{
+  "name": "projects",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GRennie92/Projects.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GRennie92/Projects/issues"
+  },
+  "homepage": "https://github.com/GRennie92/Projects#readme",
+  "devDependencies": {
+    "cypress": "^10.11.0"
+  }
+}

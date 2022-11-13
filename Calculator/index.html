@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Calculator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <script src="script.js" async defer></script>
+        <h3>Calculator</h3>
+        <!-- Results Field -->
+        <input id="sum" type="text" disabled>  <!-- added in the disabled to disable user entry -->
+        <br>
+        <!-- Row One -->
+        <input type="button" value="1" onclick="getSum(this.value)"></input>
+        <input type="button" value="2" onclick="getSum(this.value)"></input>
+        <input type="button" value="3" onclick="getSum(this.value)"></input>
+        <input type="button" value="/" onclick="getSum(this.value)"></input>
+        <br>
+        <!-- Row Two -->
+        <input type="button" value="4" onclick="getSum(this.value)"></input>
+        <input type="button" value="5" onclick="getSum(this.value)"></input>
+        <input type="button" value="6" onclick="getSum(this.value)"></input>
+        <input type="button" value="*" onclick="getSum(this.value)"></input>
+        <br>
+        <!-- Row Three -->
+        <input type="button" value="7" onclick="getSum(this.value)"></input>
+        <input type="button" value="8" onclick="getSum(this.value)"></input>
+        <input type="button" value="9" onclick="getSum(this.value)"></input>
+        <input type="button" value="-" onclick="getSum(this.value)"></input>
+        <input type="button" value="(" onclick="getSum(this.value)"></input>
+        <br>
+        <!-- Row Four -->
+        <input type="button" value="." onclick="getSum(this.value)"></input>
+        <input type="button" value="0" onclick="getSum(this.value)"></input>
+        <input type="button" value="C" onclick="backspace()"></input>
+        <input type="button" value="+" onclick="getSum(this.value)"></input>
+        <input type="button" value=")" onclick="getSum(this.value)"></input>
+        <br>
+        <!-- Row Five -->
+        <button id="equals" style="width: 80px" onclick="calculate()">=</button>
+        <button id="clear-all" onclick="location.reload()">AC</button>
+    </body>
+</html>

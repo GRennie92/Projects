@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Calculator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+    <!-- Fetching script file -->
+        <script src="script.js" async defer></script>
+        <h1>Calculator</h1>
+
+        <div class="position">
+
+            <!-- Main container for calculator element -->
+            <div class="container">
+
+                <!-- Results Field -->
+                <input data-cy="sum" id="sum" type="text" disabled></input>
+
+                <!-- Container for all the buttons -->
+                <div class="buttons">
+                    <div class="navbar">
+
+                        <!-- Row of Operators -->
+                        <div class="operators">
+                            <input data-cy="plus" type="button" value="+" onclick="getSum(this.value)"></input>
+                            <input data-cy="minus" type="button" value="-" onclick="getSum(this.value)"></input>
+                            <input data-cy="multiply" type="button" value="*" onclick="getSum(this.value)"></input>
+                            <input data-cy="divide" type="button" value="/" onclick="getSum(this.value)"></input>
+                        </div>
+                    </div>
+
+                    <!-- Main buttons -->
+                    <div class="primary-buttons">
+                        <div class="numbers">
+                            <!-- Row of Numbers: (1-3) -->
+                            <input data-cy="one" type="button" value="1" onclick="getSum(this.value)"></input>
+                            <input data-cy="two" type="button" value="2" onclick="getSum(this.value)"></input>
+                            <input data-cy="three" type="button" value="3" onclick="getSum(this.value)"></input>
+
+                            <!-- Row of Numbers: (4-6) -->
+                            <input data-cy="four" type="button" value="4" onclick="getSum(this.value)"></input>
+                            <input data-cy="five" type="button" value="5" onclick="getSum(this.value)"></input>
+                            <input data-cy="six" type="button" value="6" onclick="getSum(this.value)"></input>
+
+                            <!-- Row of Numbers: (7-9) -->
+                            <input data-cy="seven" type="button" value="7" onclick="getSum(this.value)"></input>
+                            <input data-cy="eight" type="button" value="8" onclick="getSum(this.value)"></input>
+                            <input data-cy="nine" type="button" value="9" onclick="getSum(this.value)"></input>
+
+                            <!-- Row: (0 . C) -->
+                            <input data-cy="zero" type="button" id="zero" value="0" onclick="getSum(this.value)"></input>
+                            <input data-cy="decimal" type="button" value="." onclick="getSum(this.value)"></input>
+                            <input data-cy="clear" type="button" value="C" onclick="backspace()"></input>
+                        </div>
+
+                        <!-- Column: ( "(" ")" AC) -->
+                        <div class="misc-buttons">
+                            <input data-cy="open-bracket" type="button" value="(" onclick="getSum(this.value)"></input>
+                            <br>
+                            <input data-cy="close-bracket" type="button" value=")" onclick="getSum(this.value)"></input>
+                            <br>
+                            <input data-cy="all-clear" type="button" id="clear-all" value="AC" onclick="location.reload()"></input>
+                        </div>
+
+                        <!-- Column: (=) -->
+                        <div class="equals">
+                            <input data-cy="equals" type="button" id="equals" value="=" onclick="calculate()"></input>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
